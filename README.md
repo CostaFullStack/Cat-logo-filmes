@@ -20,12 +20,3 @@ O projeto está organizado da seguinte forma:
 
 1. Abra o arquivo `index.html` em um navegador web para visualizar o catálogo de filmes.
 2. Interaja com a página usando os recursos CSS e JavaScript implementados.
-
-## Próximos Passos
-
-Algumas melhorias e funcionalidades que podem ser adicionadas:
-
-- Implementar um sistema de busca e filtragem de filmes.
-- Adicionar uma página de detalhes de cada filme.
-- Integrar com uma API de filmes para obter informações atualizadas.
-- Melhorar o design visual e a experiência do usuário.
