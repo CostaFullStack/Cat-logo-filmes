@@ -2,7 +2,7 @@ const pesquisa = document.querySelector("#pesquisa");
 const resultado = document.querySelector("#resultado");
 
 function montarCard(lista_filmes) {
-  resultado.innerHTML = ""; // Limpa os resultados anteriores
+  resultado.innerHTML = "";
   lista_filmes.forEach((e) => {
     const novo_card = document.createElement("div");
     novo_card.className = "card";
@@ -44,7 +44,7 @@ async function mostrarFilmesAtuais() {
     const lista_filmes = dados.results;
     montarCard(lista_filmes);
   } catch (error) {
-    console.log("Erro ao buscar filmes atuais:", error);
+    console.log(error);
   }
 }
 
@@ -55,11 +55,11 @@ pesquisa.addEventListener("input", async () => {
     const resposta = await fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=77c4e2b070a2e1396500d0b42ebf7cec&query=${pesquisa.value}&language=pt-BR`
     );
-    const dados = await resposta.json(); // Adicionado await
+    const dados = await resposta.json(); 
     const lista_filmes = dados.results;
-    resultado.innerHTML = ""; // Limpa os resultados anteriores
+    resultado.innerHTML = ""; 
     montarCard(lista_filmes);
   } catch (error) {
-    console.log("Erro na pesquisa:", error);
+    console.log(error);
   }
 });
